@@ -1,0 +1,488 @@
+/* TAILWIND DEPENDENCIES */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+:root {
+    --primary: #F97316;
+    --primary-hv: #1a4b780d;
+}
+
+/* NORMALIZAR ESTILOS EN LA PÁGINA Y AÑADIR FUENTE */
+* {
+    font-family: "Outfit", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-optical-sizing: auto;
+    text-decoration: none;
+    list-style: none;
+}
+
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+* textarea {
+    resize: none !important;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.carousel-span {
+    left: 50%; 
+    transform: translate(-50%,-50%);
+}
+
+.lg-body {
+    background: #c9d3e3;
+}
+
+/* SWEET ALERT BUTTON CUSTOM */
+
+.customSweet-button {
+    background-color: var(--primary);
+}
+
+/* CLASES TAILWIND */
+
+.primary-btn-active {
+    background-color: var(--primary);
+    color: #fff !important;
+}
+
+.primary-btn-active > i {
+    color: #fff !important;
+}
+
+.primary-btn:hover:not(.primary-btn-active) {
+    background-color: var(--primary-hv) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary);
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.carrusel-img-cont {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9051995798319328) 0%, rgba(0,0,0,0.6643032212885154) 19%, rgba(255,255,255,0) 39%);
+}
+
+/* PAGINAS DE LOGIN Y REGISTER */
+
+.main-Form {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-Container {
+    display: flex;
+    background: #fff;
+    margin: 20px;
+    padding: 5px;
+    height: 80vh;
+    border-radius: 10px;
+}
+
+.form-Container .image-LoginContainer img {
+    height: 100%;
+    width: auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.form-Container .loginForm-Container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 550px;
+    height: 100%;
+    padding-left: 20px;
+    padding: 45px 0px 45px 5px;
+}
+
+.form-Container .loginForm-Header .backButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: #076c8b;
+    padding: 2px 8px;
+    border-radius: 30px;
+    transition: .2s ease-in-out;
+}
+
+.form-Container .loginForm-Header .backButton:hover {
+    color: #fff;
+    background: #003b72;
+
+}
+
+.loginForm-Container .loginForm-Header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm-Container .loginForm-Header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #003b72;
+}
+
+.loginForm-Container .loginForm-Header p {
+    font-size: .9rem;
+    color: #076c8b;
+    width: 80%;
+}
+
+.loginForm-Container .loginForm-Form {
+    width: 80%;
+}
+
+.loginForm-Container .loginForm-Form .form-Input {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    line-height: 30px;
+    padding: 0 5px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: #c9d3e33d;
+    color: #0d0c22;
+    transition: .5s ease;
+}
+
+.loginForm-Container .loginForm-Form h4 {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.loginForm-Container .loginForm-Form select {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.loginForm-Container .loginForm-Form .form-Input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.loginForm-Container .loginForm-Form .form-Input i {
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.loginForm-Container .loginForm-Form .form-Input #checkPass {
+    cursor: pointer;
+}
+
+.form-Input input {
+    background: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 6px;
+}
+
+.form-Input:focus-within,
+.form-Input:hover {
+    outline: none;
+    border-color: #003b72a5 !important;
+    /* border: 2px solid #003b72; */
+    background-color: #fff !important;
+    box-shadow: 0 0 0 5px #2f689e48;
+}
+
+.loginForm-Container .loginForm-Footer button {
+    background: none;
+    outline: none;
+    border: 2px solid #003b72;
+    padding: 5px 55px;
+    border-radius: 25px;
+    color: #003b72;
+    transition: .3s ease-in-out;
+}
+
+.loginForm-Container .loginForm-Footer button:hover {
+    background: #003b72;
+    color: #fff;
+}
+
+/* MULTI STEPS STYLES */
+
+.multiSteps-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 16px;
+    height: 100%;
+}
+
+.multiSteps-Container .steps-Header {
+    display: flex;
+    position: relative;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.steps-Header .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    color: #999;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: #fff;
+    border: 4px solid #e0e0e0;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 200ms ease;
+    transition-delay: 0s;
+}
+
+.steps-Header .circle.active {
+    transition-delay: 100ms;
+    border-color: #003b72cc;
+    color: #003b72cc;
+}
+
+.steps-Header .progress-bar {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+.progress-bar .indicator {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #003b72cc;
+    transition: all 300ms ease;
+}
+
+.steps-Body {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    margin: 0; 
+}
+
+.multiSteps-Container .steps-Footer {
+    display: flex;
+    gap: 20px;
+
+}
+
+.steps-Footer button {
+    padding: 6px 20px;
+    background: #003b72cc;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+.steps-Footer button:focus {
+    outline: none;
+}
+
+.steps-Footer button:disabled {
+    /* background: #96a0ed; */
+    background: #003b724f;
+    cursor: default;
+}
+
+/* RADIO BUTTONS ESTILOS */
+
+.radio-Container input {
+    display: none;
+}
+
+.radio-Label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    width: 180px;
+    padding: 10px 0;
+    text-align: center;
+    border: 2px solid #003b724f;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+
+.radio-Label .radio-circle {
+    position: absolute;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    border: 4px solid transparent;
+    border-radius: 25px;
+    background: #003b724f;
+    transition: .3s ease-in-out;
+}
+
+.radio-Label:hover {
+    border-color: #003b72a5;
+    box-shadow: 0 0 0 5px #2f689e48;
+}
+
+.radio-Container input:checked ~ .radio-Label,
+.radio-Container input:checked ~ .radio-Label .radio-circle {
+    border-color: #003b72a5;
+}
+
+/* DROPZONE STYLES */
+
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropzone label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;
+    border: 2px dashed #003b72cc;
+    border-radius: 15px;
+}
+
+.dropzone label i {
+    font-size: 4.4em;
+    color: #003b72cc;
+}
+
+.dropzone label p {
+    display: block !important;
+    margin: 15px 0 !important;
+}
+
+.dropzone div {
+    display: block;
+}
+
+/* FOOTER DE LA PÁGINA */
+
+.footerContainer {
+    position: fixed;
+    background-color: #162eb8;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 35px;
+}
+
+/* ESTILOS MODIFICACIÓN BOOTSTRAP NO TOCAR */
+
+/* CARRUSEL STYLES */
+
+@media only screen and (max-width: 1100px) {
+    .form-Container .image-LoginContainer {
+        display: none;
+    }
+
+    .form-Container .loginForm-Container {
+        width: auto;
+    }
+
+    .form-Container { 
+        height: 94vh;
+        width: 100%;
+    }
+
+    .form-Container form {
+        width: 100%;
+    }
+
+    .loginForm-Form p {
+        text-align: center;
+    }
+
+    .profile-container {
+        flex-wrap: wrap;
+    }
+
+    .profile-img {
+        width: 100% !important;
+        /*border: none;
+        border-bottom: 2px solid transparent;
+        border-color: rgb(229 231 235 / 1);*/
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #default-carousel {
+        height: 14rem !important;
+    }
+
+    .carousel-text {
+        bottom: -.5rem !important;
+        font-size: 1.25rem !important;
+    }
+    
+    .profile-info {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .profile-info:nth-child(1){
+        border-top: 1px solid transparent;
+        border-color: rgb(229 231 235 / 1);
+    }
+
+    .slider-cont {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+}
